@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage dedicated to introducing James Clerk Maxwell, one of the greatest physicists of all time.">
+    <title>James Clerk Maxwell - Physicist</title>
+    <style>
+        /* Body with dynamic electromagnetic background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e1e60);
+            background-size: 400% 400%;
+            animation: electromagneticFlow 15s ease infinite;
+            transition: background 1s ease-in-out;
+        }
+
+        /* Enhanced tab and container contrast */
+        .container, .tab-content, .intro, .key-achievements {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 10px;
+            color: #f0f0f0;
+        }
+
+        /* Header colors with an electric blue glow */
+        h1, h2, h3 {
+            color: #00d4ff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+
+        /* Tabs and buttons with electric hover effects */
+        .tabs button {
+            background-color: rgba(0, 212, 255, 0.7);
+            border: 1px solid #00d4ff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .tabs button:hover {
+            background-color: #00b7e6;
+            transform: scale(1.05);
+        }
+        .tabs button.active {
+            background-color: #008db3;
+        }
+
+        /* Smooth transition for tab content */
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Electromagnetic animation keyframes */
+        @keyframes electromagneticFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* General Layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .intro {
+            background-color: rgba(0, 51, 102, 0.8); /* Semi-transparent blue */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #fff; /* White text for contrast */
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            background-color: #0077b6;
+            padding: 10px;
+            justify-content: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tabs button {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .tabs button:hover {
+            background-color: #005f83;
+        }
+
+        .tabs button.active {
+            background-color: #005f83;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .images-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px; /* Add spacing between the images and next section */
+        }
+
+        .images-container img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .key-achievements {
+            background-color: rgba(0, 51, 102, 0.8); /* Semi-transparent blue */
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff; /* White text for contrast */
+        }
+
+        .key-achievements h3 {
+            color: #00d4ff; /* Electric blue for the heading */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>James Clerk Maxwell</h1>
+    <p>One of the Greatest Physicists of All Time</p>
+</header>
+
+<!-- Added image section before Key Achievements -->
+<div class="container">
+    <center><img src="KLS.jpg" alt="Group photo of scientists including James Clerk Maxwell" style="max-width: 100%; height: auto; margin-bottom: 30px;"></center>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <p>James Clerk Maxwell was a Scottish physicist whose groundbreaking work in electromagnetism laid the foundation for much of modern physics. His famous Maxwell's equations are considered one of the cornerstones of classical physics, and his theories led to the development of technologies like radio, television, and lasers. Maxwell's work bridged the gap between electricity, magnetism, and light, paving the way for later discoveries such as Einstein's theory of relativity.</p>
+    </section>
+ <!-- Tabs Navigation -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab(event, 'early-life')">Early Life</button>
+        <button class="tab-button" onclick="showTab(event, 'education')">Education</button>
+        <button class="tab-button" onclick="showTab(event, 'career')">Career</button>
+        <button class="tab-button" onclick="showTab(event, 'legacy')">Legacy</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="early-life" class="tab-content active">
+        <h2>Early Life</h2>
+        <p>James Clerk Maxwell was born on June 13, 1831, in Edinburgh, Scotland, to John Clerk Maxwell, a lawyer, and Frances Cay, his mother. His father passed away when Maxwell was only eight years old, leaving him in the care of his mother and family. Maxwell was a shy child but showed an extraordinary interest in reading and mathematics from a young age. His talent for understanding complex scientific concepts became apparent early on.</p>
+    </div>
+
+    <div id="education" class="tab-content">
+        <h2>Education</h2>
+        <p>Maxwell was educated at the University of Edinburgh, where he was introduced to mathematics and natural philosophy. He later moved to the University of Cambridge, where he developed his scientific ideas and established himself as a promising young physicist. At Cambridge, Maxwell became a fellow of Trinity College, where he honed his mathematical skills and was mentored by some of the best scientific minds of the time. He was deeply influenced by Michael Faraday's work on electromagnetism.</p>
+    </div>
+
+    <div id="career" class="tab-content">
+        <h2>Career</h2>
+        <p>After completing his education, Maxwell held various academic positions. He was appointed Professor of Natural Philosophy at King's College London in 1860, where he began his most important research into the nature of electricity and magnetism. Maxwell's work on electromagnetism led to the famous Maxwell's equations, which describe how electric and magnetic fields interact. He also worked on the kinetic theory of gases, explaining the motion of molecules in a gas, and developed the Maxwell-Boltzmann distribution.</p>
+    </div>
+
+    <div id="legacy" class="tab-content">
+        <h2>Legacy</h2>
+        <p>Maxwell's contributions to science have had an enormous impact. His equations paved the way for Einstein's theory of relativity and are the foundation of modern physics. Maxwell's work on the nature of light, which showed that light is an electromagnetic wave, changed our understanding of the universe. His influence extended to the fields of optics, thermodynamics, and statistical mechanics, and he is widely regarded as one of the most influential scientists of the 19th century.</p>
+    </div>
+    <!-- Added images section before Key Achievements -->
+    <div class="images-container">
+        <img src="Mlife.jpg" alt="James Clerk Maxwell and his wife" />
+        <img src="POPO.jpg" alt="James Clerk Maxwell and his wife with dog" />
+	<img src="STS.jpg" alt="James Clerk Maxwell and his wife" />
+
+    </div>
+
+    <!-- Key Achievements -->
+    <div class="key-achievements">
+        <h3>Key Achievements</h3>
+        <ul>
+            <li>Formulated Maxwell's equations, describing the behavior of electric and magnetic fields.</li>
+            <li>Unified electricity, magnetism, and optics into one consistent theory of electromagnetism.</li>
+            <li>Developed the kinetic theory of gases, describing the movement and behavior of gas particles.</li>
+            <li>Created the Maxwell-Boltzmann distribution, a fundamental statistical tool in thermodynamics.</li>
+            <li>Proposed that light is an electromagnetic wave, changing our understanding of the nature of light.</li>
+            <li>Laid the groundwork for the development of modern physics, influencing later theories such as relativity and quantum mechanics.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Made with ❤️ by Teng_Twice.</p>
+</footer>
+
+<script>
+    function showTab(event, tabId) {
+        // Hide all tab contents
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+        
+        // Add active class to the clicked button
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
